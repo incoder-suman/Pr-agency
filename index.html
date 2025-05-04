@@ -5,82 +5,123 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VoteLine Strategies | Political PR Agency</title>
   <style>
+    :root {
+      --primary-color: #003366;
+      --accent-color: #ff6600;
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+    }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     body {
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
+
     header {
-      background: #003366;
+      background: var(--primary-color);
       color: #fff;
       padding: 20px 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
     nav ul {
       display: flex;
       justify-content: center;
       list-style: none;
       margin-top: 10px;
+      flex-wrap: wrap;
     }
+
     nav ul li {
       margin: 0 15px;
     }
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
     .hero {
-      background: url('https://images.unsplash.com/photo-1556761175-4b46a572b786') no-repeat center center/cover;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1556761175-4b46a572b786') no-repeat center center/cover;
       color: #fff;
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
     }
+
     .btn {
-      background: #ff6600;
+      background: var(--accent-color);
       color: #fff;
-      padding: 10px 20px;
+      padding: 12px 25px;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 20px;
       display: inline-block;
+      transition: background 0.3s;
     }
+
+    .btn:hover {
+      background: #e65500;
+    }
+
     section {
       padding: 60px 20px;
     }
+
     .container {
       max-width: 1200px;
       margin: 0 auto;
     }
+
     h3 {
       text-align: center;
       margin-bottom: 30px;
-      font-size: 2em;
-      color: #003366;
+      font-size: 2.2em;
+      color: var(--primary-color);
     }
+
     ul li {
       margin-bottom: 10px;
     }
+
     .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
     }
+
     .member {
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 250px;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.3s;
     }
+
+    .member:hover {
+      transform: translateY(-5px);
+    }
+
     form {
       display: flex;
       flex-direction: column;
@@ -88,21 +129,30 @@
       max-width: 500px;
       margin: auto;
     }
+
     input, textarea {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      font-size: 1em;
     }
+
     button {
-      background: #003366;
+      background: var(--primary-color);
       color: #fff;
-      padding: 10px;
+      padding: 12px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background 0.3s;
     }
+
+    button:hover {
+      background: #002244;
+    }
+
     footer {
-      background: #003366;
+      background: var(--primary-color);
       color: #fff;
       text-align: center;
       padding: 20px 0;
@@ -136,7 +186,7 @@
   <section id="about" class="about">
     <div class="container">
       <h3>About Us</h3>
-      <p>We are a Political PR agency helping candidates connect with voters through strategic image building, digital campaigns, and media management.</p>
+      <p>We are a Political PR agency helping candidates connect with voters through strategic image building, digital campaigns, and media management. We blend traditional and digital outreach to make sure your vision reaches every citizen effectively.</p>
     </div>
   </section>
 
@@ -144,12 +194,12 @@
     <div class="container">
       <h3>Our Services</h3>
       <ul>
-        <li>Image Building</li>
-        <li>Social Media Management</li>
-        <li>Speech Writing & Content</li>
-        <li>Influencer & Media Tie-ups</li>
-        <li>Digital Ad Campaigns</li>
-        <li>Crisis Management</li>
+        <li>Personal Branding & Public Image</li>
+        <li>Social Media & Meme Strategy</li>
+        <li>Speech Writing & Content Curation</li>
+        <li>Influencer Collaborations & Media Tie-ups</li>
+        <li>Election Day Booth Management</li>
+        <li>Emergency/Crisis Communication Plans</li>
       </ul>
     </div>
   </section>
@@ -159,16 +209,16 @@
       <h3>Meet Our Team</h3>
       <div class="team-grid">
         <div class="member">
-          <h4>Your Name</h4>
+          <h4>Suman Kumar</h4>
           <p>Founder & PR Strategist</p>
         </div>
         <div class="member">
-          <h4>Social Media Expert</h4>
-          <p>Campaign Manager</p>
+          <h4>Ashna Verma</h4>
+          <p>Social Media Director</p>
         </div>
         <div class="member">
-          <h4>Content Writer</h4>
-          <p>Speech & Creative Writer</p>
+          <h4>Vikram Joshi</h4>
+          <p>Senior Political Analyst</p>
         </div>
       </div>
     </div>
@@ -180,7 +230,7 @@
       <form onsubmit="submitForm(event)">
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Email Address" required />
-        <textarea placeholder="Message" required></textarea>
+        <textarea placeholder="Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
@@ -195,7 +245,7 @@
   <script>
     function submitForm(event) {
       event.preventDefault();
-      alert("Thank you! We'll get in touch soon.");
+      alert("✅ Thank you for reaching out! We'll respond shortly.");
     }
   </script>
 </body>
