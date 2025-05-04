@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoteLine Strategies | Political PR Agency</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #003366;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin-top: 10px;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1556761175-4b46a572b786') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #003366;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .member {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #003366;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background: #003366;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>VoteLine Strategies</h1>
+      <p>Powering Political Presence</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Build a Winning Political Image</h2>
+      <p>Strategic PR solutions for modern-day leaders</p>
+      <a href="#contact" class="btn">Get a Free Consultation</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About Us</h3>
+      <p>We are a Political PR agency helping candidates connect with voters through strategic image building, digital campaigns, and media management.</p>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h3>Our Services</h3>
+      <ul>
+        <li>Image Building</li>
+        <li>Social Media Management</li>
+        <li>Speech Writing & Content</li>
+        <li>Influencer & Media Tie-ups</li>
+        <li>Digital Ad Campaigns</li>
+        <li>Crisis Management</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="team" class="team">
+    <div class="container">
+      <h3>Meet Our Team</h3>
+      <div class="team-grid">
+        <div class="member">
+          <h4>Your Name</h4>
+          <p>Founder & PR Strategist</p>
+        </div>
+        <div class="member">
+          <h4>Social Media Expert</h4>
+          <p>Campaign Manager</p>
+        </div>
+        <div class="member">
+          <h4>Content Writer</h4>
+          <p>Speech & Creative Writer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h3>Contact Us</h3>
+      <form onsubmit="submitForm(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 VoteLine Strategies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Thank you! We'll get in touch soon.");
+    }
+  </script>
+</body>
+</html>
